@@ -17,7 +17,8 @@ const imageLoaded = () => {
     imageloaded++;
     if (imageloaded === totalImages) {
         ready = true;
-        console.log('ready=', ready);
+        loader.hidden = true;
+
     }
 }
 
@@ -79,7 +80,7 @@ window.addEventListener('scroll', () => {
         ready = false;
         getPhotos();
     }
-    console.log('scrolled');
+
 })
 
 getPhotos();
